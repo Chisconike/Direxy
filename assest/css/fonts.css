@@ -1,0 +1,14 @@
+@font-face {
+  font-family: bold;
+  src: url('../fonts/SFPRODISPLAYBOLD.OTF');
+}
+
+@font-face {
+  font-family: medium;
+  src: url('../fonts/SFPRODISPLAYMEDIUM.OTF');
+}
+
+@font-face {
+  font-family: regular;
+  src: url('../fonts/SFPRODISPLAYREGULAR.OTF');
+}
