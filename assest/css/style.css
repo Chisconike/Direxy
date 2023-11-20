@@ -1,13 +1,13 @@
 @import url('../css/fonts.css');
 
 /* Defaults */
-* {
-  font-family: regular !important;
-  font-style: normal !important;
-}
 
 .make_bold {
   font-family: bold;
+}
+
+.make_medium {
+  font-family: medium;
 }
 
 .make_light {
@@ -61,7 +61,7 @@
 #section2 .div_4,
 #section2 .div_5,
 #section2 .div_6 {
-  height: 100vh;
+  height: 90vh;
   display: grid;
   place-items: center;
 }
@@ -123,7 +123,7 @@
 .thumnail {
   position: relative;
   z-index: 2;
-  top: -40px;
+  top: -80px;
 }
 
 .thumnail_img {
@@ -154,6 +154,18 @@ img.thumnail_share,
 .box:hover img.thumnail_share,
 .box:hover .thumnail_text {
   display: block !important;
+}
+
+.results {
+  display: grid;
+  place-items: center;
+}
+
+.top_right,
+.top_left,
+.bottom_left,
+.bottom_right {
+  display: none !important;
 }
 
 /* X Section2 X */
@@ -238,7 +250,7 @@ img.thumnail_share,
 }
 
 #section5 .jack_msg {
-  max-width: 600px;
+  max-width: 550px;
   position: relative;
   top: -50px;
   right: 50px;
@@ -262,9 +274,9 @@ img.thumnail_share,
 }
 
 #section5 .alice_msg {
-  max-width: 600px;
+  max-width: 550px;
   position: relative;
-  top: -100px;
+  top: -130px;
   left: 160px;
   z-index: 1;
 }
@@ -304,6 +316,11 @@ img.thumnail_share,
 
 
 /*  Section6  */
+form {
+  max-width: 600px;
+  margin: auto;
+}
+
 input {
   background: transparent;
   border: none;
