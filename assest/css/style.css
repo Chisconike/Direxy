@@ -25,6 +25,20 @@
   position: relative;
 }
 
+.sub_head {
+  font-size: 56px !important;
+}
+
+
+button {
+  font-family: medium !important;
+}
+
+p,
+a {
+  font-family: light !important;
+}
+
 /* navbar */
 .navbar {
   background: rgba(0, 0, 0, 0.20);
@@ -229,6 +243,7 @@ img.thumnail_share,
     gap: 20px;
   }
 }
+
 
 /* X Section3 X */
 

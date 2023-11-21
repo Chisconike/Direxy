@@ -1,4 +1,14 @@
 $(document).ready(function () {
+  // for Nav Bar
+
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 50) {
+      $(".navbar").css("background-color", "white");
+    } else {
+      $(".navbar").css("background-color", "rgba(0, 0, 0, 0.20)");
+    }
+  });
+
   // Carousel for HomePage Slider
   $('#slide_1').owlCarousel({
     loop: true,
