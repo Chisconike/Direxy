@@ -1,11 +1,12 @@
 $(document).ready(function () {
   // for Nav Bar
-
   $(window).scroll(function () {
     if ($(this).scrollTop() > 50) {
       $(".navbar").css("background-color", "white");
+      $(".btn.btn-light").removeClass("btn-light").addClass("btn-dark text-white");
     } else {
       $(".navbar").css("background-color", "rgba(0, 0, 0, 0.20)");
+      $(".btn.btn-dark.text-white").removeClass("btn-dark text-white").addClass("btn-light");
     }
   });
 
@@ -62,9 +63,6 @@ $(document).ready(function () {
   $('#slide_3').owlCarousel({
     loop: true,
     margin: 10,
-    autoplay: true,
-    autoplayTimeout: 3000,
-    autoplayHoverPause: true,
     dots: false,
     // nav: true,
     responsive: {
