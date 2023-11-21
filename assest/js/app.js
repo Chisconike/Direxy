@@ -3,7 +3,7 @@ $(document).ready(function () {
   $(window).scroll(function () {
     if ($(this).scrollTop() > 50) {
       $(".navbar").css("background-color", "white");
-      $(".btn.btn-light").removeClass("btn-light").addClass("btn-dark text-white");
+      $(".btns").removeClass("btn-light").addClass("btn-dark text-white");
     } else {
       $(".navbar").css("background-color", "rgba(0, 0, 0, 0.20)");
       $(".btn.btn-dark.text-white").removeClass("btn-dark text-white").addClass("btn-light");
