@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+  // Carousel for HomePage Slider
   $('#slide_1').owlCarousel({
     loop: true,
     margin: 10,
@@ -7,7 +7,6 @@ $(document).ready(function () {
     autoplayTimeout: 3000,
     autoplayHoverPause: true,
     dots: true,
-    // nav: true,
     responsive: {
       0: {
         items: 1
@@ -21,14 +20,11 @@ $(document).ready(function () {
     }
   })
 
+  // Slider for section 2
   $('#slide_2').owlCarousel({
     loop: true,
     margin: 10,
-    autoplay: true,
-    autoplayTimeout: 3000,
-    autoplayHoverPause: true,
     dots: false,
-    // nav: true,
     responsive: {
       0: {
         items: 1
@@ -42,6 +38,17 @@ $(document).ready(function () {
     }
   })
 
+  // Control slider for section2
+  var currentSlide = 0;
+  $(".control").on("click", function () {
+    currentSlide++;
+    $("#slide_2").trigger("next.owl.carousel");
+    if (currentSlide === $(".owl-item").length - 1) {
+      currentSlide = 0;
+    }
+  });
+
+  // Slider for thumbnail under section2
   $('#slide_3').owlCarousel({
     loop: true,
     margin: 10,
@@ -63,28 +70,33 @@ $(document).ready(function () {
     }
   })
 
+  // Brand Section 
+  $('.top_left_hover').hover(function () {
+    $(this).attr('src', './assest/img/section3d.png');
+  }, function () {
+    $(this).attr('src', './assest/img/section3a.png');
+  });
 
-  $('#slide_6').owlCarousel({
-    loop: true,
-    margin: 0,
-    autoplay: true,
-    autoplayTimeout: 3000,
-    autoplayHoverPause: true,
-    dots: false,
-    // nav: true,
-    responsive: {
-      0: {
-        items: 1
-      },
-      600: {
-        items: 3
-      },
-      1000: {
-        items: 3
-      }
-    }
-  })
+  $('.top_right_hover').hover(function () {
+    $(this).attr('src', './assest/img/section3c.png');
+  }, function () {
+    $(this).attr('src', './assest/img/section3b.png');
+  });
 
+  $('.bottom_left_hover').hover(function () {
+    $(this).attr('src', './assest/img/section3h.png');
+  }, function () {
+    $(this).attr('src', './assest/img/section3e.png');
+  });
+
+  $('.bottom_right_hover').hover(function () {
+    $(this).attr('src', './assest/img/section3g.png');
+  }, function () {
+    $(this).attr('src', './assest/img/section3f.png');
+  });
+
+
+  // Section3 Image swap 
   var defaultImageSrc = $('.main').attr('src');
 
   $('.img_1').hover(function () {
@@ -130,29 +142,30 @@ $(document).ready(function () {
   });
 
 
-  // Brand Section
-  $('.top_left_hover').hover(function () {
-    $(this).attr('src', './assest/img/section3d.png');
-  }, function () {
-    $(this).attr('src', './assest/img/section3a.png');
-  });
+  // Slider for section4
+  $('#slide_4').owlCarousel({
+    loop: true,
+    margin: 0,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    autoplayHoverPause: true,
+    dots: false,
+    responsive: {
+      0: {
+        items: 1
+      },
+      600: {
+        items: 3
+      },
+      1000: {
+        items: 3
+      }
+    }
+  })
 
-  $('.top_right_hover').hover(function () {
-    $(this).attr('src', './assest/img/section3c.png');
-  }, function () {
-    $(this).attr('src', './assest/img/section3b.png');
-  });
-
-  $('.bottom_left_hover').hover(function () {
-    $(this).attr('src', './assest/img/section3h.png');
-  }, function () {
-    $(this).attr('src', './assest/img/section3e.png');
-  });
-
-  $('.bottom_right_hover').hover(function () {
-    $(this).attr('src', './assest/img/section3g.png');
-  }, function () {
-    $(this).attr('src', './assest/img/section3f.png');
+  // Footer Back to Top
+  $(".back_to_top_btn").on("click", function () {
+    $("html, body").animate({ scrollTop: 0 }, 800);
   });
 
 });

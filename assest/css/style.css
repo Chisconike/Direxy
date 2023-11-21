@@ -1,7 +1,6 @@
 @import url('../css/fonts.css');
 
 /* Defaults */
-
 .make_bold {
   font-family: bold;
 }
@@ -22,11 +21,17 @@
   color: #6A6960;
 }
 
+.owl-carousel {
+  position: relative;
+}
+
 /* navbar */
 .navbar {
   background: rgba(0, 0, 0, 0.20);
   backdrop-filter: blur(48.29999923706055px);
 }
+
+/* Home Page */
 
 #homepage button i.bi-caret-left-fill {
   padding: 2px 4px;
@@ -37,10 +42,6 @@
   background: #002AFF;
 }
 
-.owl-carousel {
-  position: relative;
-}
-
 #homepage .owl-dots {
   position: absolute;
   bottom: 0px;
@@ -48,6 +49,7 @@
   margin-top: auto;
   padding: 20px 0px;
 }
+
 
 /* Section2 */
 #section2 {
@@ -96,6 +98,18 @@
   backdrop-filter: blur(10.100000381469727px);
   max-width: 600px;
 }
+
+
+#section2 .control {
+  position: absolute;
+  right: 80px;
+  bottom: 100px;
+  z-index: 4;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
 
 #section2 img {
   width: 50px !important;
@@ -156,10 +170,10 @@ img.thumnail_share,
   display: block !important;
 }
 
-.results {
-  display: grid;
-  place-items: center;
-}
+/* X Section2 X */
+
+
+/* Section3 */
 
 .top_right,
 .top_left,
@@ -168,10 +182,11 @@ img.thumnail_share,
   display: none !important;
 }
 
-/* X Section2 X */
+.results {
+  display: grid;
+  place-items: center;
+}
 
-
-/* Section3 */
 
 #slide_4 img {
   object-fit: cover !important;
@@ -229,6 +244,7 @@ img.thumnail_share,
 
 
 /*  Section5  */
+
 #section5 .jack_alice {
   position: relative !important;
 }
@@ -282,8 +298,6 @@ img.thumnail_share,
 }
 
 @media only screen and (max-width: 900px) {
-
-
   #section5 .jack_container {
     top: 0px;
     align-items: center;
@@ -332,7 +346,6 @@ input {
 input::placeholder {
   color: #6A6960;
 }
-
 
 .back_to_top_btn {
   background: transparent;
