@@ -146,9 +146,6 @@ $(document).ready(function () {
   $('#slide_4').owlCarousel({
     loop: true,
     margin: 0,
-    autoplay: true,
-    autoplayTimeout: 3000,
-    autoplayHoverPause: true,
     dots: false,
     responsive: {
       0: {
@@ -162,6 +159,10 @@ $(document).ready(function () {
       }
     }
   })
+  // Control slider for section4
+  $("#next_slider").on("click", function () {
+    $("#slide_4").trigger("next.owl.carousel");
+  });
 
   // Footer Back to Top
   $(".back_to_top_btn").on("click", function () {

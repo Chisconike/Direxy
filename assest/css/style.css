@@ -240,6 +240,11 @@ img.thumnail_share,
   width: 90%;
 }
 
+.arrow_control button {
+  border: none;
+  outline: none;
+}
+
 /* X Section4 X */
 
 
