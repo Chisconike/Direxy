@@ -34,10 +34,10 @@ button {
   font-family: medium !important;
 }
 
-p,
+/* p,
 a {
   font-family: light !important;
-}
+} */
 
 /* navbar */
 .navbar {
@@ -201,6 +201,13 @@ img.thumnail_share,
   place-items: center;
 }
 
+.height {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 300px;
+}
 
 #slide_4 img {
   object-fit: cover !important;
