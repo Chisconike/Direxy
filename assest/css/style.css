@@ -368,6 +368,7 @@ input {
   outline: none;
   border-bottom: 1px solid #6A6960;
   padding-bottom: 15px;
+  color: #6A6960;
 }
 
 input::placeholder {
