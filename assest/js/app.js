@@ -179,6 +179,109 @@ $(document).ready(function () {
   });
 
 
+  // For numbers Count
+
+  var observer = new IntersectionObserver(function (entries, observer) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        // Start counting animation when the section is in view
+        startCountAnimation();
+        // Stop observing once started
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  // Observe the target section
+  observer.observe(document.getElementById('blog'));
+
+  function startCountAnimation() {
+    $('.count').each(function () {
+      var start = $(this).data('start');
+      var end = $(this).data('end');
+      var duration = 3000; // adjust the duration as needed
+      var suffix = '';
+
+      if (start >= 1000000) {
+        start /= 1000000;
+        end /= 1000000;
+        suffix = 'M';
+      } else if (start >= 1000) {
+        start /= 1000;
+        end /= 1000;
+        suffix = 'K';
+      }
+
+      $(this).prop('Counter', start).animate({
+        Counter: end
+      }, {
+        duration: duration,
+        easing: 'swing',
+        step: function () {
+          if (suffix === 'M') {
+            $(this).text(Math.ceil(this.Counter * 100) / 100 + suffix);
+          } else {
+            $(this).text(suffix === '' ? Math.ceil(this.Counter) : Math.ceil(this.Counter) + suffix);
+          }
+        }
+      });
+    });
+  }
+
+  startCountAnimation();
+
+
+
+
+  // var observer = new IntersectionObserver(function (entries, observer) {
+  //   entries.forEach(function (entry) {
+  //     if (entry.isIntersecting) {
+  //       // Start counting animation when the section is in view
+  //       startCountAnimation();
+  //       // Stop observing once started
+  //       observer.unobserve(entry.target);
+  //     }
+  //   });
+  // }, { threshold: 0.5 });
+
+
+  // // Observe the target section
+  // observer.observe(document.getElementById('blog'));
+
+  // function startCountAnimation() {
+  //   $('.count').each(function () {
+  //     var start = $(this).data('start');
+  //     var end = $(this).data('end');
+  //     var duration = 3000; // adjust the duration as needed
+  //     var suffix = '';
+
+  //     if (start >= 1000000) {
+  //       start /= 1000000;
+  //       end /= 1000000;
+  //       suffix = 'M';
+  //     } else if (start >= 1000) {
+  //       start /= 1000;
+  //       end /= 1000;
+  //       suffix = 'K';
+  //     }
+
+  //     $({ Counter: start }).animate({
+  //       Counter: end
+  //     }, {
+  //       duration: duration,
+  //       easing: 'swing',
+  //       step: function () {
+  //         if (suffix === 'M') {
+  //           $(this).text(Math.ceil(this.Counter * 100) / 100 + suffix);
+  //         } else {
+  //           $(this).text(suffix === '' ? Math.ceil(this.Counter) : Math.ceil(this.Counter) + suffix);
+  //         }
+  //       }
+  //     });
+  //   });
+  // }
+
+
   // For Scroll
 
   gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
