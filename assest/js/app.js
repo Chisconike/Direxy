@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
   // for Nav Bar
   $(window).scroll(function () {
     if ($(this).scrollTop() > 50) {
@@ -80,27 +81,27 @@ $(document).ready(function () {
 
   // Brand Section 
   $('.top_left_hover').hover(function () {
-    $(this).attr('src', './assest/img/section3d.png');
+    $(this).attr('src', './assest/img/section3d.jpg');
   }, function () {
-    $(this).attr('src', './assest/img/section3a.png');
+    $(this).attr('src', './assest/img/section3a.jpg');
   });
 
   $('.top_right_hover').hover(function () {
-    $(this).attr('src', './assest/img/section3c.png');
+    $(this).attr('src', './assest/img/section3c.jpg');
   }, function () {
-    $(this).attr('src', './assest/img/section3b.png');
+    $(this).attr('src', './assest/img/section3b.jpg');
   });
 
   $('.bottom_left_hover').hover(function () {
-    $(this).attr('src', './assest/img/section3h.png');
+    $(this).attr('src', './assest/img/section3h.jpg');
   }, function () {
-    $(this).attr('src', './assest/img/section3e.png');
+    $(this).attr('src', './assest/img/section3e.jpg');
   });
 
   $('.bottom_right_hover').hover(function () {
-    $(this).attr('src', './assest/img/section3g.png');
+    $(this).attr('src', './assest/img/section3g.jpg');
   }, function () {
-    $(this).attr('src', './assest/img/section3f.png');
+    $(this).attr('src', './assest/img/section3f.jpg');
   });
 
 
@@ -176,5 +177,19 @@ $(document).ready(function () {
   $(".back_to_top_btn").on("click", function () {
     $("html, body").animate({ scrollTop: 0 }, 800);
   });
+
+
+  // For Scroll
+
+  gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+  let smoother = ScrollSmoother.Create({
+    wrapper: '#wrapper',
+    content: '.main',
+  })
+
+  // For Flip
+
+
 
 });
